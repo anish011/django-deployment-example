@@ -1,0 +1,10 @@
+{% extends 'user_signin/base.html' %}
+{% block body_block %}
+  <div class="jumbotron">
+    {% if user.is_authenticated %}
+      <h1>Welcome to index page, {{ user.username }}</h1>
+    {% else %}
+      <h1>Welcome to index page</h1>
+    {% endif %}
+  </div>
+{% endblock %}
